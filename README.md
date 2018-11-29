@@ -4,17 +4,17 @@
 2. opencv 3.0 for python3.6 `pip install opencv-python`  
 3. dlib 19.16  
 ## 模型下载  
-下载地址 ： 百度云盘 https://pan.baidu.com/s/1h01sfvf5KWU6_7c2-i5HTQ  
 人脸关键点检测器 `predictor_path="shape_predictor_68_face_landmarks.dat`  
 人脸识别模型 `face_rec_model_path = "dlib_face_recognition_resnet_model_v1.dat`  
-含人脸库candidate-face中人脸不同表情的测试数据集 `test-face.zip` 解压后与上述模型均置于根目录下  
+含人脸库candidate-face中人脸不同表情的测试数据集 `test-face.zip` 解压后与上述文件均置于根目录下  
+下载地址 ： 百度云盘 https://pan.baidu.com/s/1h01sfvf5KWU6_7c2-i5HTQ  
 ## 运行  
 运行`python candidate_train.py` 获得人脸库特征信息，存储在`candidates.npy` 与 `candidates.txt` 中  
 运行 `python facerec_68point.py`  得到识别结果all-face-result.jpg
 ## 补充    
 1. 每次人脸库candidate-face中加入新的人脸数据，均需运行`python candidate_train.py`  
 2. `python facerec_68point.py`检测的是与人脸库中最相似的
-3. 提供 `this_is_who.py` 进行在`test-face`文件夹中的批量测试
+3. 提供 `this_is_who.py` 进行在`test-face`文件夹中的批量测试，测试结果存于`faceRec`文件夹，识别错误结果存于`faceRec_ERROR`
 4. 最近的项目是在红外人脸图像上进行的，人脸不太清晰，如果是正常摄像头效果应该会更好
 ## 运行结果   
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/all-face-result.jpg)  
