@@ -3,6 +3,9 @@
 1. Ubuntu 16.04  
 2. opencv 3.0 for python3.6 `pip install opencv-python`  
 3. dlib 19.16  
+
+编译dlib库出现问题，可参考这篇：https://blog.csdn.net/ffcjjhv/article/details/84660869  
+
 ## 模型下载  
 人脸关键点检测器 `predictor_path="shape_predictor_68_face_landmarks.dat`  
 人脸识别模型 `face_rec_model_path = "dlib_face_recognition_resnet_model_v1.dat`  
