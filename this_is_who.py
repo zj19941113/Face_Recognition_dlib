@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-import sys, os, dlib, numpy
-from skimage import io
+import os, dlib, numpy
 import cv2
 
 # 1.人脸关键点检测器
@@ -55,7 +54,7 @@ for file in filelist:
     # 提取描述子
     print("Processing file: {}".format(img_path))
 
-    img = io.imread(img_path)
+    img = cv2.imread(img_path)
     dets = detector(img, 1)
     # print("Number of faces detected: {}".format(len(dets)))
 
