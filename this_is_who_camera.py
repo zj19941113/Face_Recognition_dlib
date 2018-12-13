@@ -45,8 +45,8 @@ while (cap.isOpened()):  #isOpened()  检测摄像头是否处于打开状态
     ret, img = cap.read()  #把摄像头获取的图像信息保存之img变量
     if ret == True:       #如果摄像头读取图像成功
         # 添加提示
-        cv2.putText(img, "press 'S': screenshot", (20, 400), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1, cv2.LINE_AA)
-        cv2.putText(img, "press 'Q': quit", (20, 450), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1, cv2.LINE_AA)
+        cv2.putText(img, "press 'S': screenshot", (20, 420), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1, cv2.LINE_AA)
+        cv2.putText(img, "press 'Q': quit", (20, 440), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 1, cv2.LINE_AA)
 
         # img_gray = cv2.cvtColor(im_rd, cv2.COLOR_RGB2GRAY)
         dets = detector(img, 1)
