@@ -14,6 +14,7 @@
 ## 运行  
 运行`python candidate_train.py` 获得人脸库特征信息，存储在`candidates.npy` 与 `candidates.txt` 中  
 运行 `python facerec_68point.py`  得到识别结果all-face-result.jpg
+运行 `this_is_who_camera.py`  打开摄像头进行实时的人脸识别
 ## 补充    
 1. 每次人脸库candidate-face中加入新的人脸数据，均需运行`python candidate_train.py`  
 2. `python facerec_68point.py`检测的是与人脸库中最相似的
@@ -22,3 +23,4 @@
 ## 运行结果   
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/all-face-result.jpg)  
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/img/result2.png) 
+![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/Animation.gif) 
