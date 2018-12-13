@@ -24,3 +24,5 @@
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/all-face-result.jpg)  
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/img/result2.png) 
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/Animation.gif) 
+保存的截图  
+![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/screenShots/screenshot_4_2018-12-13-17-19-42.jpg) 
