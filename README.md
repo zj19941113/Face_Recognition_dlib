@@ -13,7 +13,7 @@
 下载地址 ： 百度云盘 https://pan.baidu.com/s/1h01sfvf5KWU6_7c2-i5HTQ  
 ## 运行  
 运行`python candidate_train.py` 获得人脸库特征信息，存储在`candidates.npy` 与 `candidates.txt` 中  
-运行 `python facerec_68point.py`  得到识别结果all-face-result.jpg
+运行 `python facerec_68point.py`  得到识别结果all-face-result.jpg  
 运行 `this_is_who_camera.py`  打开摄像头进行实时的人脸识别
 ## 补充    
 1. 每次人脸库candidate-face中加入新的人脸数据，均需运行`python candidate_train.py`  
