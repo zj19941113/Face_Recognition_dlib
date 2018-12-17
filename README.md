@@ -20,8 +20,7 @@
 2. `python facerec_68point.py`检测的是与人脸库中最相似的
 3. 提供 `this_is_who.py` 进行在`test-face`文件夹中的批量测试，测试结果存于`faceRec`文件夹，识别错误结果存于`faceRec_ERROR`
 4. 最近的项目是在红外人脸图像上进行的，人脸不太清晰，如果是正常摄像头效果应该会更好
-## 运行结果   
-![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/all-face-result.jpg)  
+## 运行结果    
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/img/result2.png) 
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/Animation.gif)   
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/screenShots/screenshot_4_2018-12-13-17-19-42.jpg) 
