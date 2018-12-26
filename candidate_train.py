@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 
 import sys,os,dlib,numpy
-from skimage import io
 import cv2
 
 # 1.人脸关键点检测器
@@ -45,7 +44,7 @@ for file in filelist:
     f = os.path.join(faces_folder_path,file)
     #if os.path.splitext(file)[1] == ".jpg" #文件扩展名
     print("Processing file: {}".format(f))
-    img = io.imread(f)
+    img = cv2.imread(f)
     # 1.人脸检测
     dets = detector(img, 1)
 
