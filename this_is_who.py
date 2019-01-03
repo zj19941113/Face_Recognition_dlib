@@ -60,28 +60,34 @@ for file in filelist:
 
     for k, d in enumerate(dets):
         shape = sp(img, d)
+        for pt in shape.parts():
+            pt_pos = (pt.x, pt.y)
+            cv2.circle(img, pt_pos, 2, (0, 255, 0), 1)
         face_descriptor = facerec.compute_face_descriptor(img, shape)
         d_test2 = numpy.array(face_descriptor)
-
         # 计算欧式距离
         dist = []
         for i in descriptors:
             dist_ = numpy.linalg.norm(i - d_test2)
             dist.append(dist_)
-        num =  dist.index(min(dist))  # 返回最小值
-        # print("This is " , candidate[num])
+        if (min(dist)) > 0.5:
+            this_is = "Unknow"
+        else:
+            num = dist.index(min(dist))  # 返回最小值
+            this_is = candidate[num][0:4]
+        # print( min(dist))
 
         left_top = (dlib.rectangle.left(d), dlib.rectangle.top(d))
         right_bottom = (dlib.rectangle.right(d), dlib.rectangle.bottom(d))
         cv2.rectangle(img, left_top, right_bottom, (0, 255, 0), 2, cv2.LINE_AA)
         text_point = (dlib.rectangle.left(d), dlib.rectangle.top(d) - 5)
-        cv2.putText(img, candidate[num], text_point, cv2.FONT_HERSHEY_PLAIN, 2.0, (255, 255, 255), 2, 1)  # 标出face
+        cv2.putText(img, this_is, text_point, cv2.FONT_HERSHEY_PLAIN, 2.0, (255, 255, 255), 2, 1)  # 标出face
 
-    if candidate[num][0:4] == file[0:4]:
+    if this_is == file[0:4]:
        right_num += 1
     else:
         print("Processing file: ",img_path," ERROR !")
-        cv2.imwrite(os.path.join(faceRect_ERROR_path, file+"_to_"+candidate[num][0:4]+".jpg"), img)
+        cv2.imwrite(os.path.join(faceRect_ERROR_path, file+"_to_"+this_is+".jpg"), img)
 
     cv2.imwrite(os.path.join(faceRect_path,file), img)
 
