@@ -22,6 +22,9 @@ faceRect_path = "faceRec"
 # 6.识别错误结果存放文件夹
 faceRect_ERROR_path = "faceRec_ERROR"
 
+# 7.相似度阈值，高于此值为非人脸库数据，显示unknow
+is_not_candidate = 0.6
+
 
 # 1.加载正脸检测器
 detector = dlib.get_frontal_face_detector()
@@ -70,7 +73,7 @@ for file in filelist:
         for i in descriptors:
             dist_ = numpy.linalg.norm(i - d_test2)
             dist.append(dist_)
-        if (min(dist)) > 0.5:
+        if (min(dist)) > is_not_candidate:
             this_is = "Unknow"
         else:
             num = dist.index(min(dist))  # 返回最小值
