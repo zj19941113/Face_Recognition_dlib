@@ -14,7 +14,7 @@
 ## 运行  
 运行 `python candidate_train.py` 获得人脸库特征信息，存储在`candidates.npy` 与 `candidates.txt` 中  
 运行 `python facerec_68point.py`  得到识别结果all-face-result.jpg  
-运行 `this_is_who.py` 进行在`test-face`文件夹中的批量测试，测试结果存于`faceRec`文件夹，识别错误结果存于`faceRec_ERROR` ,不设相似度阈值时识别正确率为0.99469，但是这里寻找的是与数据库中最相似的人脸，加入相似度阈值使非数据库中的人显示unknown，相似度阈值is_not_candidate=0.5时，准确率0.976127，相似度阈值is_not_candidate=0.6时，准确率0.986737，但是将unknow识别为人脸库人脸的可能性会升高。
+运行 `this_is_who.py` 进行在`test-face`文件夹中的批量测试，测试结果存于`faceRec`文件夹，识别错误结果存于`faceRec_ERROR` ,不设相似度阈值时识别正确率为0.99469，但是这里寻找的是与数据库中最相似的人脸，加入相似度阈值使非数据库中的人显示unknown，相似度阈值is_not_candidate=0.5时，准确率0.976127，相似度阈值is_not_candidate=0.6时，准确率0.986737，但是将unknow识别为人脸库人脸的可能性会升高。  
 运行 `this_is_who_camera.py`  打开摄像头进行实时的人脸识别  
 ## 补充    
 1. 每次人脸库candidate-face中加入新的人脸数据，均需运行`python candidate_train.py` 
