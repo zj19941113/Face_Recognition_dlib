@@ -20,7 +20,7 @@
 1. 每次人脸库candidate-face中加入新的人脸数据，均需运行`python candidate_train.py` 
 2. 最近的项目是在红外人脸图像上进行的，人脸不太清晰，如果是正常摄像头效果应该会更好
 ## 运行结果  
-![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/img/faces.jpg) 
+![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/img/faces.JPG) 
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/img/result2.png) 
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/Animation.gif)   
 ![](https://github.com/zj19941113/Face_Recognition_dlib/blob/master/screenShots/screenshot_4_2018-12-13-17-19-42.jpg) 
